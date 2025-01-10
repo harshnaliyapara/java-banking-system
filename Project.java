@@ -36,7 +36,7 @@ public class Project {
   }
 
   public static void checkBalance() {
-    System.out.println("Your current balance is ₹" + balance);
+    System.out.println("Your current balance is Rs." + balance);
   }
 
   public static void deposit() {
@@ -44,19 +44,19 @@ public class Project {
     System.out.print("Enter the amount to deposit: ₹");
     double amount = scanner.nextDouble();
     balance = balance + amount;
-    System.out.println("₹" + amount + " has been deposited to your account.");
+    System.out.println("Rs." + amount + " has been deposited to your account.");
     checkBalance();
   }
 
   public static void withdraw() {
     Scanner scanner = new Scanner(System.in);
-    System.out.print("Enter the amount to withdraw: ₹");
+    System.out.print("Enter the amount to withdraw: Rs.");
     double amount = scanner.nextDouble();
     if (amount > balance) {
       System.out.println("Insufficient funds.");
     } else {
       balance -= amount;
-      System.out.println("₹" + amount + " has been withdrawn from your account.");
+      System.out.println("Rs." + amount + " has been withdrawn from your account.");
     }
     checkBalance();
   }
